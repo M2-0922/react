@@ -9,11 +9,11 @@ function myComponent() {
         <small>I'm tiny text!</small>
     )
 }
-ans = missing a semicolon after the bracket
-function myComponent() {
+ans = function name should be in capital letter
+function MyComponent() {
     return (
         <small>I'm tiny text!</small>
-    );
+    )
 }
 ```
 
