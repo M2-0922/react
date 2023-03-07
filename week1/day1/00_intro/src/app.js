@@ -116,6 +116,7 @@ const HeroJSX = <div className="container">
 // translate jsx code to react.createElement code.
 // code here 
 
+
 const landingPage = React.createElement(
     "div",
     { className: "container"},
@@ -249,5 +250,4 @@ const landingPage = React.createElement(
 );
 
 
-
-ReactDOM.render(landingPage, document.getElementById("root"));
+ReactDOM.render(jxtTranspile, document.getElementById("root"));
