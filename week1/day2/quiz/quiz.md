@@ -33,6 +33,6 @@ function Header() {
 
 ReactDOM.render(Header(), document.getElementById("root"))
 ```
-ReactDOM.render(<Header />, document.getElementById("root"))
+<!-- ReactDOM.render(<Header />, document.getElementById("root")) -->
 
 calling the Header function wrong
