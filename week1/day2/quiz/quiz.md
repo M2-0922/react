@@ -1,7 +1,9 @@
 1. What is a React component?
 
+   A function and a class which can contain multiple HTML elements and are reusable for similar contents.
 
 2. What's wrong with this code?
+
 ```
 function myComponent() {
     return (
@@ -10,7 +12,10 @@ function myComponent() {
 }
 ```
 
+    A React component's name needs to start with a uppercase letter.
+
 3. What's wrong with this code?
+
 ```
 function Header() {
     return (
@@ -24,3 +29,5 @@ function Header() {
 
 ReactDOM.render(Header(), document.getElementById("root"))
 ```
+
+    The Header component should be called with less-than and greater-than signs instead of with parentheses
