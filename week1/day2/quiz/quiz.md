@@ -10,7 +10,7 @@ function myComponent() {
     )
 }
 ```
-<small>tag should be wrapped with JSX fragment
+`small` tag should be wrapped with JSX fragment
 
 3. What's wrong with this code?
 ```
@@ -26,5 +26,5 @@ function Header() {
 
 ReactDOM.render(Header(), document.getElementById("root"))
 ```
-<header>tag should be wrapped with JSX element, and then use <Header /> instead of Header() under the render statement.
+`header` tag should be wrapped with JSX element, and then use `<Header />` instead of Header() under the render statement.
 
