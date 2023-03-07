@@ -1,5 +1,5 @@
 1. What is a React component?
-
+    Independent and reusable bits of code
 
 2. What's wrong with this code?
 ```
@@ -9,6 +9,12 @@ function myComponent() {
     )
 }
 ```
+ans:
+function MyComponent() {
+    return (
+        <small>I'm tiny text!</small>
+    )
+}
 
 3. What's wrong with this code?
 ```
@@ -24,3 +30,4 @@ function Header() {
 
 ReactDOM.render(Header(), document.getElementById("root"))
 ```
+ans:
