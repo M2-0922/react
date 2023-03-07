@@ -144,6 +144,49 @@ let landingPage1 = React.createElement(
     )
 )
 
+let jxtTranspile = React.createElement("div", { className: "container" }, 
+React.createElement("nav", null,
+    React.createElement("ul", null, 
+    React.createElement("li", null, 
+        React.createElement("h3", null, "LOGO")
+        ),
+        React.createElement("li", null, 
+            React.createElement("a", { href: "#home" }, "Home")
+        ),
+        React.createElement("li", null, 
+            React.createElement("a", { href: "#about" }, "About")
+        ),
+        React.createElement("li", null, 
+            React.createElement("a", { href: "#contact" }, "Contact")
+        )
+    )
+),
+React.createElement("main", null, 
+    React.createElement("section", null, 
+        React.createElement("h1", { id: "title" }, "Hello World"),
+        React.createElement("p", { id: "paragraph" }, "This is first React Application"),
+        React.createElement("button", { className: "btn btn-dark" }, "Click me"),
+    ),
+    React.createElement("section", { id: "article" }, 
+        React.createElement("article", null, 
+            React.createElement("h3", null, "Item One"),
+            React.createElement("p", null, "Nulla amet fugiat nostrud sint nulla aute est. "),
+            ),
+        React.createElement("article", null, 
+            React.createElement("h3", null, "Item One"),
+            React.createElement("p", null, "Nulla amet fugiat nostrud sint nulla aute est. "),
+            ),
+        React.createElement("article", null, 
+            React.createElement("h3", null, "Item One"),
+            React.createElement("p", null, "Nulla amet fugiat nostrud sint nulla aute est. "),
+            ),
+        React.createElement("article", null, 
+            React.createElement("h3", null, "Item One"),
+            React.createElement("p", null, "Nulla amet fugiat nostrud sint nulla aute est. "),
+            )
+        ),
+    ),
+)
 
 
 ReactDOM.render(landingPage1, document.getElementById("root"));
