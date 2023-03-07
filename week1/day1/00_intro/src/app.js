@@ -155,6 +155,4 @@ const landingPageReact = React.createElement("div", { className: "container" },
 
 
 
-
-
-ReactDOM.render(landingPage, document.getElementById("root"));
+ReactDOM.render(jxtTranspile, document.getElementById("root"));
