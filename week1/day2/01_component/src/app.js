@@ -45,9 +45,19 @@ let page =
 function Header(){
     return (
         <header>
-            <nav>
-                <img src="./src/react-logo.png" alt="" />
-                <h2>Logo</h2>
+            <nav className="nav">
+                <img className="nav--logo" src="./src/react-logo.png" alt="" />
+                <ul className="nav--list">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
             </nav>
         </header>
     );
@@ -59,21 +69,8 @@ Challenge:
 - Move the `footer` into its own component called "Footer" 
   and render that component inside the Page component.
 
-  
-
-  function Page(){
-    return(
-        ...
-        ...
-        <Footer />
-    )
-  }
-
-  AFTER THE BREAK
-
 - Move the `h2` and `ul` together into another component
   called "MainContent" and render inside Page as well.
-
 
 */
 
