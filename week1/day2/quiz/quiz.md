@@ -29,6 +29,12 @@ function Header() {
 ReactDOM.render(Header(), document.getElementById("root"))
 ```
 
+```
 ReactDOM.render(Header(), document.getElementById("root"))
+```
+
 should be
+
+```
 ReactDOM.render(<Header />, document.getElementById("root"))
+```
