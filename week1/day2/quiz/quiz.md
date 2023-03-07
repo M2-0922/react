@@ -13,7 +13,7 @@ function myComponent() {
 
 Answer
 
-'myComponent' should be 'MyComponent' and need the code below to render.
+`myComponent` should be `MyComponent` and need the code below to render.
 
 ```
 ReactDOM.render(<MyComponent />, document.getElementById('root'));
@@ -37,7 +37,7 @@ ReactDOM.render(Header(), document.getElementById("root"))
 
 Answer
 
-<Header /> instead of Header()
+`<Header />` instead of Header()
 
 ```
 ReactDOM.render(<Header />, document.getElementById("root"));
