@@ -1,4 +1,5 @@
 1. What is a React component?
+It is a reusable piece of code that describes the UI of an application
 
 
 2. What's wrong with this code?
@@ -9,6 +10,8 @@ function myComponent() {
     )
 }
 ```
+
+The first letter of the function should be uppercase
 
 3. What's wrong with this code?
 ```
@@ -23,4 +26,10 @@ function Header() {
 }
 
 ReactDOM.render(Header(), document.getElementById("root"))
+```
+
+the function should be called like this: 
+
+```
+ReactDOM.render(<Header />, document.getElementById("root"))
 ```
