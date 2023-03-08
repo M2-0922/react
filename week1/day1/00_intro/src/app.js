@@ -35,17 +35,17 @@ const myDiv = React.createElement(
 const NavBar = React.createElement(
     "nav",
     null,
-    React.createElement("ul", null, React.createElement("li", null, 
-    React.createElement("a", { href: "https://google.com"}, "Home"))),
+    React.createElement("ul", null, React.createElement("li", null,
+        React.createElement("a", { href: "https://google.com" }, "Home"))),
     React.createElement("ul", null, React.createElement("li", null, "Contact")),
     React.createElement("ul", null, React.createElement("li", null, "About"))
 )
 
-function handleClick () {
+function handleClick() {
     console.log("Discovering...");
 }
 
-const Hero = React.createElement("div", { className: "container" }, 
+const Hero = React.createElement("div", { className: "container" },
     React.createElement("h1", { className: "title" }, "Hello React"),
     React.createElement("p", { className: "paragraph" }, "This is the way of using React.createElement"),
     React.createElement("button", { onClick: handleClick }, "Discover")
@@ -66,97 +66,77 @@ const HeroJSX = <div className="container">
 
 // Render the element on Virtual React DOM.
 
-const landingPage = 
-<div className="container">
-    <nav>
-        <ul>
-            <li>
-                <h3>LOGO</h3>
-            </li>
-            <li>
-                <a href="#home">Home</a>
-            </li>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h1 id="title">Hello World</h1>
-            <p id="paragraph">This is first React Application</p>
-            <button className="btn btn-dark">Click me</button>
-        </section>
+const landingPage =
+    <div className="container">
+        <nav>
+            <ul>
+                <li>
+                    <h3>LOGO</h3>
+                </li>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h1 id="title">Hello World</h1>
+                <p id="paragraph">This is first React Application</p>
+                <button className="btn btn-dark">Click me</button>
+            </section>
 
-        <section id="article">
-            <article>
-                <h3>Item One</h3>
-                <p>Nulla amet fugiat nostrud sint nulla aute est. </p>
-            </article>
-            <article>
-                <h3>Item Two</h3>
-                <p>Nulla amet fugiat nostrud sint nulla aute est. </p>
-            </article>
-            <article>
-                <h3>Item Three</h3>
-                <p>Nulla amet fugiat nostrud sint nulla aute est. </p>
-            </article>
-            <article>
-                <h3>Item Four</h3>
-                <p>Nulla amet fugiat nostrud sint nulla aute est. </p>
-            </article>
-        </section>
-    </main>
-</div>
+            <section id="article">
+                <article>
+                    <h3>Item One</h3>
+                    <p>Nulla amet fugiat nostrud sint nulla aute est. </p>
+                </article>
+                <article>
+                    <h3>Item Two</h3>
+                    <p>Nulla amet fugiat nostrud sint nulla aute est. </p>
+                </article>
+                <article>
+                    <h3>Item Three</h3>
+                    <p>Nulla amet fugiat nostrud sint nulla aute est. </p>
+                </article>
+                <article>
+                    <h3>Item Four</h3>
+                    <p>Nulla amet fugiat nostrud sint nulla aute est. </p>
+                </article>
+            </section>
+        </main>
+    </div>
 
 // translate jsx code to react.createElement code.
 // code here 
 
-let jxtTranspile = React.createElement("div", { className: "container" }, 
-React.createElement("nav", null,
-    React.createElement("ul", null, 
-    React.createElement("li", null, 
-        React.createElement("h3", null, "LOGO")
-        ),
-        React.createElement("li", null, 
-            React.createElement("a", { href: "#home" }, "Home")
-        ),
-        React.createElement("li", null, 
-            React.createElement("a", { href: "#about" }, "About")
-        ),
-        React.createElement("li", null, 
-            React.createElement("a", { href: "#contact" }, "Contact")
-        )
-    )
-),
-React.createElement("main", null, 
-    React.createElement("section", null, 
-        React.createElement("h1", { id: "title" }, "Hello World"),
-        React.createElement("p", { id: "paragraph" }, "This is first React Application"),
-        React.createElement("button", { className: "btn btn-dark" }, "Click me"),
+
+const landingPage = React.createElement("div",
+    { className: "container" },
+    React.createElement("nav", null, React.createElement("ul", null, React.createElement("li", null,
+        React.createElement("h3", null, "LOGO"),
+        React.createElement("a", { href: "#home" }, "LOGO"),
+        React.createElement("a", { href: "#about" }, "About"),
+        React.createElement("a", { href: "#contact" }, "CONTACT")
     ),
-    React.createElement("section", { id: "article" }, 
-        React.createElement("article", null, 
-            React.createElement("h3", null, "Item One"),
-            React.createElement("p", null, "Nulla amet fugiat nostrud sint nulla aute est. "),
+        React.createElement("main", null,
+            React.createElement("section", null,
+                React.createElement("h1", { idName: "title" }, "Hello World"),
+                React.createElement("p", { idName: "paragraph" }, "This is first React Application"),
+                React.createElement("button", { className: "btn btn-dark" }, "Click me")
             ),
-        React.createElement("article", null, 
-            React.createElement("h3", null, "Item One"),
-            React.createElement("p", null, "Nulla amet fugiat nostrud sint nulla aute est. "),
-            ),
-        React.createElement("article", null, 
-            React.createElement("h3", null, "Item One"),
-            React.createElement("p", null, "Nulla amet fugiat nostrud sint nulla aute est. "),
-            ),
-        React.createElement("article", null, 
-            React.createElement("h3", null, "Item One"),
-            React.createElement("p", null, "Nulla amet fugiat nostrud sint nulla aute est. "),
-            )
-        ),
-    ),
+            React.createElement("section", { idName: "article" }, 
+            React.createElement("article",null.React.createElement("h3",null,"Item One"),React.createElement("p",null,"Nulla amet fugiat nostrud sint nulla aute est. ")),)
+            React.createElement("article",null.React.createElement("h3",null,"Item Two"),React.createElement("p",null,"Nulla amet fugiat nostrud sint nulla aute est. ")),
+            React.createElement("article",null.React.createElement("h3",null,"Item Three"),React.createElement("p",null,"Nulla amet fugiat nostrud sint nulla aute est. ")),
+            React.createElement("article",null.React.createElement("h3",null,"Item Four"),React.createElement("p",null,"Nulla amet fugiat nostrud sint nulla aute est. "))
+            
+            ))),
 )
 
-ReactDOM.render(jxtTranspile, document.getElementById("root"));
+ReactDOM.render(landingPage, document.getElementById("root"));//axtuteru??
