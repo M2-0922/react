@@ -1,9 +1,10 @@
 1. What is a React component?
-
+- A function that returns React elements.(UI+logic)
+- Reusable, maintainable, 
 
 2. What's wrong with this code?
 ```
-function myComponent() {
+function MyComponent() {
     return (
         <small>I'm tiny text!</small>
     )
@@ -22,5 +23,5 @@ function Header() {
     )
 }
 
-ReactDOM.render(Header(), document.getElementById("root"))
+ReactDOM.render(<Header />, document.getElementById("root"))
 ```
