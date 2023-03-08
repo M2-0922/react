@@ -1,8 +1,8 @@
 function Header(){
   return (
     <header className="header">
-      <img className="logo" src="./images/FX-logo 1.png" alt="" />
-      <h1 className="title">ReactFatcs</h1>
+      <img className="header--logo" src="./images/FX-logo 1.png" alt="" />
+      <h1 className="header--title">ReactFatcs</h1>
     </header>
   );
 }
