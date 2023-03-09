@@ -1,10 +1,15 @@
 1. What is a React component?
+<<<<<<< HEAD
 It is a reusable piece of code that describes the UI of an application
 
+=======
+- A function that returns React elements.(UI+logic)
+- Reusable, maintainable, 
+>>>>>>> master
 
 2. What's wrong with this code?
 ```
-function myComponent() {
+function MyComponent() {
     return (
         <small>I'm tiny text!</small>
     )
@@ -25,11 +30,14 @@ function Header() {
     )
 }
 
+<<<<<<< HEAD
 ReactDOM.render(Header(), document.getElementById("root"))
 ```
 
 the function should be called like this: 
 
 ```
+=======
+>>>>>>> master
 ReactDOM.render(<Header />, document.getElementById("root"))
 ```
