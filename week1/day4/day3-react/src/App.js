@@ -12,6 +12,22 @@ function App() {
       <Header />
       <Hero />
       <div className="card-list">
+      <Card 
+        rating="5.0"
+        like="6"
+        location="USA"
+        title="Joshua Tree, California, US"
+        price="6,610"
+        image={cardThreeImage}
+      />
+      <Card 
+        rating="4.5"
+        like="7000000000"
+        location="Vatican"
+        title="Pope's House, Christ St, Vatican"
+        price="610"
+        image={cardOneImage}
+      />
       </div>
       {/* <Footer /> */}
     </div>
