@@ -1,0 +1,52 @@
+$primary_color: #222222;
+$secondary_color: #918E9B;
+$font_size: 12px;
+$font_weight: 300;
+
+p{
+    margin: 0;
+}
+
+.card{
+    width: 176px;
+    &--header{
+        margin-bottom: 9px;
+    }
+    color: $primary_color;
+    &--body{
+        height: 14px;
+        img{
+            height: 100%;
+        }
+        font-size: $font_size;
+        font-weight: $font_weight;
+
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        &--rating{
+            
+        }
+        &--like{
+            color: $secondary_color;
+        }
+        &--location{
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: $secondary_color;
+            span{
+                font-size: 6px;
+            }
+        }
+    }
+    &--info{
+        font-size: $font_size;
+        font-weight: $font_weight;
+
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 6px;
+    }
+}
