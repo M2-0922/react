@@ -11,8 +11,10 @@ components/
 virtual DOM/ 
 JSX syntax / 
 lifecycles/ 
+
 modules (import/export) / 
 destructure / 
+
 props and state / 
 using functions (class/functional) / 
 fragments / 
