@@ -1,9 +1,10 @@
 1. What is a React component?
-    Independent and reusable bits of code.Lets us split the UI into independent, reusable pieces and think about each piece in isolation.
+    Independent and reusable bits of code.Lets us split the UI into independent, reusable pieces and think about each piece in isolation.- A function that returns React elements.(UI+logic)
+- Reusable, maintainable, 
 
 2. What's wrong with this code?
 ```
-function myComponent() {
+function MyComponent() {
     return (
         <small>I'm tiny text!</small>
     )
@@ -23,7 +24,7 @@ function Header() {
     )
 }
 
-ReactDOM.render(Header(), document.getElementById("root"))
+ReactDOM.render(<Header />, document.getElementById("root"))
 ```
 let root = ReactDOM.createRoot(document.getElementById("root"));
  root.render(<Header/>)
