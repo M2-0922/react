@@ -1,0 +1,6 @@
+.card-list {
+    display: flex;
+    margin: 2rem;
+    gap: 0.5rem;
+    overflow-x: scroll;
+}

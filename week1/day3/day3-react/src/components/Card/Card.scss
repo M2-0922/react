@@ -1,0 +1,44 @@
+$font-size: 12px;
+$primary-color: #222222;
+$secondary-color: #918E9B;
+
+.card {
+    font-size: $font-size;
+    color: $primary-color;
+    padding: 1rem 0;
+    &--header {
+        img {
+            width: 176px;
+            height: 235px;
+        }
+    }
+    &--body {
+        padding: 0.1rem;
+        display: flex;
+        align-items: center;
+        img {
+            height: 1em;
+        }
+        span {
+            margin: 0.1rem;
+        }
+        .secondary-color{
+            color: $secondary-color;
+        }
+        .card-location {
+            display: flex;
+            align-items: center;
+            .black-circle {
+                font-size: 6px;
+            }
+        }
+    }
+    &--info {
+        .card-title {
+            padding: 0.1rem 0;
+        }
+        .card-price {
+            padding: 0.1rem 0;
+        }
+    }
+}
