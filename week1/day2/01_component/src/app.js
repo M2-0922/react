@@ -56,28 +56,6 @@
 // /**
 // Challenge: 
 
-<<<<<<< HEAD
-// - Move the `footer` into its own component called "Footer" 
-//   and render that component inside the Page component.
-
-  
-
-//   function Page(){
-//     return(
-//         ...
-//         ...
-//         <Footer />
-//     )
-//   }
-
-//   AFTER THE BREAK
-
-// - Move the `h2` and `ul` together into another component
-//   called "MainContent" and render inside Page as well.
-
-
-// */
-=======
 // console.log(sum(1, 2));
 // console.log(sum(1, 4));
 // console.log(sum(3, 5));
@@ -140,7 +118,6 @@ Challenge:
   called "MainContent" and render inside Page as well.
 
 */
->>>>>>> master
 
 // function Footer(){
 //     return(
