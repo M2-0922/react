@@ -213,3 +213,5 @@ const landingPage = React.createElement(
 );
 
 ReactDOM.render(landingPage, document.getElementById("root"));
+
+ReactDOM.render(landingPage, document.getElementById("root"));
