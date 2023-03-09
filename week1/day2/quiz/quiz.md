@@ -2,6 +2,9 @@
 
 React is a JavaScript library for building UI parts on website. And component desplaed on the screen in React that has data and functions. 
 
+-A function that returns react elements(UI+logic)
+-Reusable, maintainable
+
 
 2. What's wrong with this code?
 ```

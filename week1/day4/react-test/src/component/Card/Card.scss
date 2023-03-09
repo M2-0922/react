@@ -1,0 +1,57 @@
+$primary_color: #222222;
+$secondary_color: #918E9B;
+
+$font_size: 12px;
+$font_weight: 300;
+
+.card {
+    width: 176px;
+    &--header {
+        position: relative;
+        &--available {
+            position: absolute;
+            height: 20px;
+            width: 55px;
+            background-color: #FFFFFF;
+            top: 10px;
+            left: 10px;
+            p {
+                display: block;
+                margin-top: 5px;
+                font-size: 10px;
+                text-align: center;
+            }
+        }
+    }
+    &--body {
+        margin-top: 5px;
+        height: 14px;
+        img {
+            height: 100%;
+        }
+        font-size: $font_size;
+        font-weight: $font_weight;
+
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        &--rating {
+            
+        }
+        &--like {
+            color: $secondary_color;
+        }
+        &--location {
+            color: $secondary_color;
+            
+        }
+    }
+    &--info {
+        font-size: $font_size;
+        font-weight: $font_weight;
+
+
+
+    }
+}

@@ -1,0 +1,43 @@
+.card {
+  width: 176px;
+}
+.card--header {
+  position: relative;
+}
+.card--header--available {
+  position: absolute;
+  height: 20px;
+  width: 55px;
+  background-color: #FFFFFF;
+  top: 10px;
+  left: 10px;
+}
+.card--header--available p {
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  text-align: center;
+}
+.card--body {
+  margin-top: 5px;
+  height: 14px;
+  font-size: 12px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.card--body img {
+  height: 100%;
+}
+.card--body--like {
+  color: #918E9B;
+}
+.card--body--location {
+  color: #918E9B;
+}
+.card--info {
+  font-size: 12px;
+  font-weight: 300;
+}
+/*# sourceMappingURL=Card.css.map */
