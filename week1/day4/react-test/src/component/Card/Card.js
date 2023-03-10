@@ -24,9 +24,11 @@ const Card = ({ title, rating, like, location, price, image, available }) => {
         <div className="card">
             <div className="card--header">
                 <div className="card--header--available">
-                    <p>{available}</p>
+                    <p>{available ? available : ""}</p>
                 </div>
-                <img src={image} alt="cardImage" />
+                <div className="card--header--image">
+                    <img src={image} alt="cardImage" />
+                </div>
             </div>
             <div className="card--body">
                 <img src={starIcon} alt="starIcon" />
