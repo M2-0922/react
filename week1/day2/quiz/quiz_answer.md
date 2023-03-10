@@ -1,4 +1,9 @@
 1. What is a React component?
+```
+Answer:
+ It's like a function that return HTML element and also  independent and reusable bits of code. 
+ It serves the same purpose as JavaScript function, but work in isolation and return HTML.
+```
 - A function that returns React elements.(UI+logic)
 - Reusable, maintainable, 
 
@@ -9,6 +14,10 @@ function MyComponent() {
         <small>I'm tiny text!</small>
     )
 }
+```
+```
+Answer:
+Always start component names with a capital letter.
 ```
 
 3. What's wrong with this code?
@@ -23,5 +32,9 @@ function Header() {
     )
 }
 
-ReactDOM.render(<Header />, document.getElementById("root"))
+ReactDOM.render(Header(), document.getElementById("root"))
+```
+```
+Answer:
+ReactDOM.render(<Header />, document.getElementById("root"));
 ```
