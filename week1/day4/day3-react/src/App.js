@@ -13,8 +13,7 @@ function App() {
 
   // console.log(data);
 
-  const cardElements = data.map((house) => <Card key={house.id} {...house} />
-  )
+  const cardElements = data.map((house, index) => <Card key={house.id} {...house} />);
 
   // const arr = [
   //   <h1>Hello</h1>,
