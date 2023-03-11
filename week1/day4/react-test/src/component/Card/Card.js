@@ -20,7 +20,7 @@ import starIcon from "../../image/star.png";
 // ************************
 
 const Card = ({ title, rating, like, location, price, image, available }) => {
-    return (
+    return 
         <div className="card">
             <div className="card--header">
                 <div className="card--header--available">
