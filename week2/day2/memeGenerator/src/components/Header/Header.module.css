@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 65px;
+    background: linear-gradient(90deg, #B3A86E 1.18%, #FAD200 100%);
+    color: white;
+    padding: 20px;
+}
+
+.image{
+    height: 100%;
+    margin-right: 8px;
+    /* margin-right: auto; */
+}
+
+.title{
+    font-size: 1.25rem;
+}
