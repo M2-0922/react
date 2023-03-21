@@ -33,6 +33,7 @@ const ThemeProvider = ({ children }) => {
 
 // Create a child component that uses the context
 const ThemeToggler = () => {
+  
   return (
     <ThemeContext.Consumer>
       {({ theme, toggleTheme }) => (
