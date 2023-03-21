@@ -11,6 +11,12 @@ p{
     width: 176px;
     &--header{
         margin-bottom: 9px;
+        img{
+            width: 176px;
+            height: 236px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
     }
     color: $primary_color;
     &--body{
