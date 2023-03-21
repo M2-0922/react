@@ -35,7 +35,6 @@ const Meme = () => {
         })
     }
 
-
     const handleChange = (event) => {
         const { name, value } = event.target;
         
@@ -45,6 +44,7 @@ const Meme = () => {
                 [name]: value
             }
         })
+
     }
 
     return(

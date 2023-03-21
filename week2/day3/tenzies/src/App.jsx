@@ -7,8 +7,44 @@ import Confetti from "confetti-react";
 
 function App() {
   const [dice, setDice] = useState(createNewDice());
+  [{
+    value: Math.ceil(Math.random() * 6),
+    isHeld: false,
+    id: nanoid()
+  }, {
+    value: Math.ceil(Math.random() * 6),
+    isHeld: false,
+    id: nanoid()
+  },{
+    value: Math.ceil(Math.random() * 6),
+    isHeld: false,
+    id: nanoid()
+  },{
+    value: Math.ceil(Math.random() * 6),
+    isHeld: false,
+    id: nanoid()
+  },{
+    value: 5,
+    isHeld: false,
+    id: nanoid()
+  },{
+    value: 2,
+    isHeld: false,
+    id: nanoid()
+  },{
+    value: 1,
+    isHeld: false,
+    id: nanoid()
+  },{
+    value: 4,
+    isHeld: false,
+    id: nanoid()
+  },{
+    value: 2,
+    isHeld: false,
+    id: nanoid()
+  }]
   const [tenzie, setTenzie] = useState(false);
-  const [count, setCount] = useState(10);
 
   useEffect(() => {
     // if all die's are green all held will be true;
@@ -61,13 +97,23 @@ function App() {
     //   })
     // })
 
-    setDice(prevDice => (prevDice.map((die) => 
-      die.id === id 
-        ? {...die, isHeld: !die.isHeld} 
-        : die
-        )
-      )
-    )
+    // setDice(prevDice => (prevDice.map((die) => 
+    //   die.id === id 
+    //     ? {...die, isHeld: !die.isHeld} 
+    //     : die
+    //     )
+    //   )
+    // )
+
+    setDice(prevState => {
+      return prevState.map((die) => {
+        if(die.id === id){
+          return {...die, isHeld: !die.isHeld}
+        }else {
+          return die
+        }
+      })
+    })
   }
 
   // function blabla(){

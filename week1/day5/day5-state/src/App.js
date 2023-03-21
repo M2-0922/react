@@ -9,9 +9,10 @@ function App(props) {
 
   function incrementCount () {
     // setCount(count + 1)
-    setCount((oldCount) => {
-      return oldCount + 1
-    });
+    setCount(oldValue => {
+      return oldValue + 1
+    })
+    // setCount((oldCount) => oldCount + 1);
     // count = 5;
     // console.log(count);
   }
@@ -34,6 +35,14 @@ function App(props) {
     // })
 
     // setCount(oldCount => oldCount > 0 ? oldCount - 1 : oldCount)
+
+
+    setCount(oldValue => {
+      // if(oldValue >= 0) return oldValue - 1
+      // else return oldValue
+      return oldValue >= 0 ? oldValue - 1 : oldValue
+    })
+    // ternary operator
   }
 
   return (
