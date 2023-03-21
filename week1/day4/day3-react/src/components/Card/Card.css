@@ -9,6 +9,13 @@ p {
 .card--header {
   margin-bottom: 9px;
 }
+.card--header img {
+  width: 176px;
+  height: 236px;
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .card--body {
   height: 14px;
   font-size: 12px;
