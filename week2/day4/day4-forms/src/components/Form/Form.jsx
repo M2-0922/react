@@ -60,6 +60,8 @@ const Form = () => {
             [name]: type === "checkbox" ? checked : value
         }
     })
+
+    console.log(formInputs);
   }
 
   const resetForm = (event) => {

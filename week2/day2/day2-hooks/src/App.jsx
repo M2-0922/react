@@ -12,7 +12,7 @@ function App(props) {
 
   useEffect(() => {
     console.log("Counting");
-  }, [count]);
+  }, []);
 
 
   function increase () {
