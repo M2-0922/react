@@ -1,11 +1,16 @@
 1. What is a React component?
+   <<<<<<< HEAD
 
-   A function and a class which can contain multiple HTML elements and are reusable for similar contents.
+   # A function and a class which can contain multiple HTML elements and are reusable for similar contents.
+
+- A function that returns React elements.(UI+logic)
+- Reusable, maintainable,
+  > > > > > > > 49a23483847a205473be0afa4bdfe923971f9b1b
 
 2. What's wrong with this code?
 
 ```
-function myComponent() {
+function MyComponent() {
     return (
         <small>I'm tiny text!</small>
     )
