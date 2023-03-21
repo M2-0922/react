@@ -1,0 +1,80 @@
+.meme{
+    position: relative;
+}
+
+.memeImage{
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.content{
+    position: absolute;
+    /* font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin: 16px 0;
+
+    padding: 0 6px;
+
+    font-family: Impact, sans-serif;
+    font-size: 2em;
+
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+
+}
+
+.topText{
+    top: 0;
+}
+
+.bottomText{
+    bottom: 0;
+}
+
+.form{
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 16px;
+    font-family: "Karla", sans-serif;
+}
+
+.customInput{
+    border-radius: 4px;
+    border: 1px solid #D5D4D8;
+    outline: none;
+    text-indent: 12px;
+    /* padding-left: 12px; */
+}
+
+.customButton{
+    grid-column: 1 / -1;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #B3A86E 1.18%, #FAD200 100%);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
