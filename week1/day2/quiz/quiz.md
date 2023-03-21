@@ -1,9 +1,12 @@
 1. What is a React component?
-    Independent and reusable bits of code
+- A function that returns React elements.(UI+logic)
+- Reusable, maintainable,     
+
+Independent and reusable bits of code
 
 2. What's wrong with this code?
 ```
-function myComponent() {
+function MyComponent() {
     return (
         <small>I'm tiny text!</small>
     )
@@ -28,6 +31,6 @@ function Header() {
     )
 }
 
-ReactDOM.render(Header(), document.getElementById("root"))
+ReactDOM.render(<Header />, document.getElementById("root"))
 ```
 ans:
