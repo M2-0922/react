@@ -3,7 +3,7 @@
 The purpose is allowing track state in a function component.
 ```
 - What is the syntax for using useState in a functional component?
-```
+```jsx
 const [state, setState] = useState(initialState) 
 ```
 - What is the default value of a state variable initialized with useState?
@@ -23,7 +23,7 @@ Yes, if we combine the loading state and data state into one state object, we ca
 The purpose is telling React that it has to do something after the render
 ```
 - What is the syntax for using useEffect in a functional component?
-```
+```jsx
 import React, { useEffect } from 'react';
 useEffect(() => {
     // process 
@@ -63,20 +63,25 @@ Add the variable of target in the array.
 ```
 - What is the second argument to useEffect used for?
 ```
-
+It’s an array of dependencies.
 ```
 - How do you simulate componentDidMount with useEffect?
-```
+```jsx
+useEffect(function(), [])
 ```
 - How do you simulate componentWillUnmount with useEffect?
-```
+```jsx
+useEffect(function() { return function() }, [])
 ```
 - How do you simulate componentDidUpdate with useEffect?
-```
+```jsx
+useEffect(function())
 ```
 - Can you have side effects in the callback function passed to useState?
 ```
+No. This can be a problem when moving from a React class component to a function component.
 ```
 - Can you have state variables in the callback function passed to useEffect?
 ```
+Yes.
 ```
