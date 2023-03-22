@@ -3,6 +3,7 @@ import ThemeContext from "../../context/ThemeContext";
 import styled from "styled-components";
 import AvatarCard from "../AvatarCard/AvatarCard";
 import Description from "../Description/Description";
+import Social from "../Social/Social";
 
 const CustomTitle = styled.h1`
 	font-style: normal;
@@ -30,6 +31,7 @@ const Hero = ({ content }) => {
 			<CustomTitle theme={theme}>{content}</CustomTitle>
 			<AvatarCard />
 			<Description />
+			<Social />
 		</>
 	);
 };

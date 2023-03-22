@@ -6,10 +6,10 @@ const DescriptionContainer = styled.div`
 	width: 500px;
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
 	font-size: 28px;
 	letter-spacing: 1px;
-	color: ${(props) => (props.theme === "light" ? "rgb(51, 51, 51)" : "#d6d6d6")};
+	color: ${(props) => (props.theme === "light" ? "rgb(51, 51, 51)" : "#FBFBFB")};
 `;
 
 const DescriptionContent = styled.p`
