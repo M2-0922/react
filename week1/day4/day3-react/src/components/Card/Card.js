@@ -7,7 +7,10 @@ function Card (props) {
     // console.log(props.age);
     // const { name } = props;
 
+<<<<<<< HEAD
     console.log(props);
+=======
+>>>>>>> master
     return (
         <div className="card">
             <div className="card--header">
@@ -21,7 +24,11 @@ function Card (props) {
             </div>
             <div className="card--info">
                 <p>{props.title}</p>
+<<<<<<< HEAD
                 <p><strong>From ${props.price}</strong> / night</p>
+=======
+                <p><strong>From ${props.price}</strong> / {props.stay ? props.stay : "3 nights" }</p>
+>>>>>>> master
             </div>
         </div>
     )
