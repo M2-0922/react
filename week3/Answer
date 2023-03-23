@@ -3,7 +3,7 @@
 
 - What is the syntax for using useState in a functional component?
 ▶︎ const [variable, functionNameToControlVariable] = useState(initialValue);
-▶︎ ex. const [count, setCount] = useState(0);
+▶︎ ex. const [count, setCount] = useState(10);
 ▶︎ ex. const [status, setStatus] = useState('non-active');
 
 - What is the default value of a state variable initialized with useState?
