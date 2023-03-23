@@ -26,6 +26,7 @@
 
 
 - What is the syntax for using useEffect in a functional component?
+- When does the callback function passed to useEffect get called?
 ▶︎ 1. Runs on every render
 useEffect(() => {
   add logic of the side effect
@@ -36,17 +37,31 @@ useEffect(() => {
   add logic of the side effect
 }, [])
 
-▶︎ 3. Runs only on the first render and any time any dependency value changes
+▶︎ 3. Runs on the first render and any time any dependency value changes
 useEffect(() => {
   add logic of the side effect
 }, [prop, state])
 
 
-- When does the callback function passed to useEffect get called?
-
-
 - Can you use useEffect more than once in a single component?
+▶︎ Yes
+
 - How do you unsubscribe from a subscription created in a useEffect hook?
+▶︎ Add a return function at the end of the useEffect Hook.
+▶︎ ex. 
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+    setCount((count) => count + 1);
+  }, 1000);
+
+  return () => clearTimeout(timer)
+  }, []);
+}
+
+
 - What is the difference between useEffect and componentDidMount in a class component?
 - What is the difference between useEffect and componentWillUnmount in a class component?
 - What is the difference between useEffect and componentDidUpdate in a class component?
