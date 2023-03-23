@@ -4,6 +4,7 @@ import styled from "styled-components";
 import AvatarCard from "../AvatarCard/AvatarCard";
 import Description from "../Description/Description";
 import Social from "../Social/Social";
+import CommonButton from "../CommonButton/CommonButton";
 
 const CustomTitle = styled.h1`
 	font-style: normal;
@@ -32,6 +33,7 @@ const Hero = ({ content }) => {
 			<AvatarCard />
 			<Description />
 			<Social />
+			<CommonButton />
 		</>
 	);
 };
