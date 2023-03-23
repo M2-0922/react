@@ -20,13 +20,18 @@ const CustomTitle = styled.h1`
     width: 80%;
 `;
 
-const Hero = ({ content }) => {
+const Hero = ({content}) => {
     const { theme } = useContext(ThemeContext);
+    const nextJsContent = {
+      title:"Nextjs Staeter",
+      content:"A dead simple for nextjs project.",
+      star: "8"
+    };
   return (
     <>
         <CustomTitle theme={theme}>{content}</CustomTitle>
         <AvatarCard />
-        <NextjsStarter />
+        <NextjsStarter theme={theme} {...nextJsContent} />
     </>
   )
 }

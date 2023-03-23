@@ -4,8 +4,32 @@ import ThemeContext from '../../context/ThemeContext'
 import reactIcon from '../../assets/reactIcon.png'
 import tailwindIcon from '../../assets/tailwindIcon.png'
 import rectangle from '../../assets/rectangle.png'
-import star from '../../assets/star.png'
+import starIcon from '../../assets/star.png'
 
+
+const NextjsStarter = ({title, content, star}) => {
+  const { theme } = useContext(ThemeContext);
+  return (
+    <NextjsStarterContainer theme={theme}>
+        <upper>
+          <h4>{title}</h4>
+          <p>{content}</p>
+        </upper>
+        <bottom>
+          <div>
+            <img src={tailwindIcon} alt=""/>
+            <img src={rectangle} alt=""/>
+            <img src={reactIcon} alt=""/>          
+            <img src={rectangle} alt=""/>
+          </div>
+          <stars>
+            <img src={starIcon} alt=""/>
+            <p>{star}  Stars</p>
+          </stars>
+        </bottom>
+    </NextjsStarterContainer>
+  )
+}
 
 const NextjsStarterContainer = styled.div`
   width: 556px;
@@ -67,30 +91,5 @@ const NextjsStarterContainer = styled.div`
     }
   }
   `;
-
-
-const NextjsStarter = () => {
-  const { theme } = useContext(ThemeContext);
-  return (
-    <NextjsStarterContainer theme={theme}>
-        <upper>
-          <h4>Nextjs Starter</h4>
-          <p>A dead simple for nextjs project.</p>
-        </upper>
-        <bottom>
-          <div>
-            <img src={tailwindIcon} alt=""/>
-            <img src={rectangle} alt=""/>
-            <img src={reactIcon} alt=""/>          
-            <img src={rectangle} alt=""/>
-          </div>
-          <stars>
-            <img src={star} alt=""/>
-            <p>8 Stars</p>
-          </stars>
-        </bottom>
-    </NextjsStarterContainer>
-  )
-}
 
 export default NextjsStarter
