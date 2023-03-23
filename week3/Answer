@@ -63,7 +63,13 @@ function Timer() {
 
 
 - What is the difference between useEffect and componentDidMount in a class component?
+▶︎ componentDidMount is invoked synchronously before the browser paints the screen, 
+while useEffect is invoked asynchronously after the browser has already painted the screen.
+
 - What is the difference between useEffect and componentWillUnmount in a class component?
+▶︎ componentWillUnmount is invoked only when the component is unmounted (removed from DOM), 
+while useEffect is not invoked when the component is unmounted.
+
 - What is the difference between useEffect and componentDidUpdate in a class component?
 - How do you conditionally run the effect only when certain values change?
 - What is the second argument to useEffect used for?
