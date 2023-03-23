@@ -71,7 +71,14 @@ while useEffect is invoked asynchronously after the browser has already painted 
 while useEffect is not invoked when the component is unmounted.
 
 - What is the difference between useEffect and componentDidUpdate in a class component?
+▶︎ componentDidMount is invoked only when the component is updated,
+while useEffect is invoked when the component is mounted and updated (re-rendered).
+
 - How do you conditionally run the effect only when certain values change?
+▶︎ useEffect(() => {
+  add logic of the side effect
+}, [ADD THE CERTAIN VALUES HERE!!])
+
 - What is the second argument to useEffect used for?
 - How do you simulate componentDidMount with useEffect?
 - How do you simulate componentWillUnmount with useEffect?
