@@ -11,7 +11,6 @@ const Button = styled(Link)`
 	padding: 15px 17px 15px 23px;
 	border-radius: 12px;
 	background-color: #323443;
-
 	text-decoration: none;
 	color: #c9c9c9;
 `;
