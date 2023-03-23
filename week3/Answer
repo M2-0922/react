@@ -2,7 +2,7 @@
 ▶︎ The useState Hook can be used to keep track of strings, numbers, booleans, arrays, objects, and any combination of these.
 
 - What is the syntax for using useState in a functional component?
-▶︎ const [state, setState] = useState(initialValue);
+▶︎ const [count, setCount] = useState(initialValue);
 
 - What is the default value of a state variable initialized with useState?
 ▶︎ undefined
@@ -11,9 +11,12 @@
 ▶︎ No, useState should be called one by one for each variable.
 
 - How do you update a state variable with useState?
-
+▶︎ setCount(put logic here to update count)
+▶︎ ex. setCount(count -1)
 
 - What is the purpose of the useEffect hook?
+▶︎ The useEffect Hook allows you to perform side effects in your components.
+
 - What is the syntax for using useEffect in a functional component?
 - When does the callback function passed to useEffect get called?
 - Can you use useEffect more than once in a single component?
