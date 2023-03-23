@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import ThemeContext from '../../context/ThemeContext';
 import styled from 'styled-components';
 import AvatarCard from '../AvatarCard/AvatarCard';
+import NextjsStarter from '../NextjsStarter/NextjsStarter';
 
 const CustomTitle = styled.h1`
     font-style: normal;
@@ -25,6 +26,7 @@ const Hero = ({ content }) => {
     <>
         <CustomTitle theme={theme}>{content}</CustomTitle>
         <AvatarCard />
+        <NextjsStarter />
     </>
   )
 }
