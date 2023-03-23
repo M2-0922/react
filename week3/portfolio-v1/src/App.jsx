@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Snippet from "./pages/Snippet/Snippet";
 
+
 function App() {
   const [theme, setTheme] = useState("dark");
 
@@ -19,6 +20,7 @@ function App() {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <BrowserRouter>
         <Nav name="joe" />
+        
         <Routes>
           <Route path="/" element={<Home />} /> 
           <Route path="/portfolio" element={<Portfolio />} /> 

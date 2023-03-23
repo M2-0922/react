@@ -6,10 +6,13 @@ const AvatarCardContainer = styled.div`
     width: 155px;
     height: 155px;
     border-radius: 50%;
-    border: 2px solid ${props => props.theme === "light" ? "#333" : "#fff" };
+    border: 2px solid ${props => props.theme === "light" ? "#333" : "#fff"}; 
+    background-color: ${props => props.theme === "light" ? "#fff" : "#333"};
+    
     display: flex;
     justify-content: center;
     align-items:center;
+    
 `;
 
 const AvatarCard = () => {
