@@ -20,7 +20,7 @@ const BiographyCardContainer = styled.div`
     }
     p{
         font-size: 14px;
-        color: #EFEDE8;
+        color:${props => props.theme === 'light' ? '#333' : '#EFEDE8'};;
         line-height: 2;
     }
 `;
@@ -57,7 +57,7 @@ const BiographyCard = (props) => {
     const { theme } = useContext(ThemeContext);
     return (
         <BiographyCardContainer theme={theme}>
-            <IconWrapper><Icon theme={theme}>{props.icon}</Icon></IconWrapper>
+            <IconWrapper theme={theme}><Icon theme={theme}>{props.icon}</Icon></IconWrapper>
             <h6>{props.title}</h6>
             <p>{props.content}</p>
         </BiographyCardContainer>
