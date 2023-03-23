@@ -10,9 +10,14 @@ const Button = styled(Link)`
 	height: 45px;
 	padding: 15px 17px 15px 23px;
 	border-radius: 12px;
-	background-color: #323443;
+	border: solid 1px #323443;
+	background-color: ${(props) => (props.theme === "light" ? "#fff" : "#323443")};
 	text-decoration: none;
-	color: #c9c9c9;
+	color: ${(props) => (props.theme === "light" ? "#323443" : "#c9c9c9")};
+
+	&:hover {
+		opacity: 0.8;
+	}
 `;
 
 const ButtonIcon = styled.div`
@@ -21,19 +26,19 @@ const ButtonIcon = styled.div`
 		width: 14px;
 		height: 2px;
 		margin: 2px;
-		background-color: #c4c4c4;
+		background-color: ${(props) => (props.theme === "light" ? "#323443" : "#c4c4c4")};
 	}
 `;
 
 const ButtonTitle = styled.p`
-	display: inline;
 	padding-left: 20px;
 	font-size: 14px;
 `;
 
 const CommonButton = () => {
+	const { theme } = useContext(ThemeContext);
 	return (
-		<Button>
+		<Button to="/" theme={theme}>
 			<ButtonIcon>
 				<span></span>
 				<span></span>
