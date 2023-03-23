@@ -5,10 +5,10 @@
 ▶︎ const [state, setState] = useState(initialValue);
 
 - What is the default value of a state variable initialized with useState?
-▶︎ 
+▶︎ undefined
 
 - Can you update multiple state variables with a single call to useState?
-▶︎ 
+▶︎ No, useState should be called one by one for each variable.
 
 - How do you update a state variable with useState?
 
