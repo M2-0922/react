@@ -18,6 +18,7 @@ const BioWrapper = styled.div`
     background-color: ${props => props.theme === "light" ? "#fff" : "#333"};
     color: ${props => props.theme === "light" ? "#333" : "#fff"};
     display:flex;
+    align-items:flex-start;
     padding: 20px 20px;
     gap: 30px; 
     
