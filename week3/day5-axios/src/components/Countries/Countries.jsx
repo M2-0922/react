@@ -4,7 +4,8 @@ import {
     Container,
     ListGroup,
     ListGroupItem,
-    Input
+    Input,
+    Label
 } from "reactstrap"
 
 const Countries = () => {
@@ -39,7 +40,8 @@ const Countries = () => {
     <Container>
         <h1>Countries</h1>
         <ListGroup>
-            <Input type='text' onChange={(event) => setFilterString(event.target.value)} value={filterString} />
+            <Label for="search">Search Country: </Label>
+            <Input type='text' onChange={(event) => setFilterString(event.target.value)} value={filterString} id="search"/>
             {
                 filteredCountries.map((country) => {
                     return <ListGroupItem key={country.cca3}>{country.name.common} {country.flag} - {country.capital}</ListGroupItem>
