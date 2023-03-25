@@ -60,7 +60,7 @@ const Course = ({ image, name, title, description }) => {
     return (
         <CourseContainer theme={ theme }>
             <CourseImageContainer theme={ theme }>
-                <img src={image} slt={name} />
+                <img src={image} alt={name} />
             </CourseImageContainer>
             <CourseDescContainer theme={ theme }>
                 <h6>{title}</h6>
