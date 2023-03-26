@@ -31,20 +31,20 @@ import Joke from "./components/Joke/Joke";
 //  } from 'reactstrap';
 
 function App() {
-  const [username, setUsername] = useState("andasan");
-  const [repositories, setRepositories] = useState([]);
+  // const [username, setUsername] = useState("andasan");
+  // const [repositories, setRepositories] = useState([]);
 
-  const fetchRepositories = async () => {
-    try {
-      const response = await axios.get(
-        `https://api.github.com/users/${username}/repos`
-      );
-      console.log(response);
-      setRepositories(response.data);
-    } catch (error) {
-      console.log(`Error fetching respositories: ${error}`);
-    }
-  };
+  // const fetchRepositories = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       `https://api.github.com/users/${username}/repos`
+  //     );
+  //     console.log(response);
+  //     setRepositories(response.data);
+  //   } catch (error) {
+  //     console.log(`Error fetching respositories: ${error}`);
+  //   }
+  // };
 
   return (
     // <ChakraProvider className="App">
