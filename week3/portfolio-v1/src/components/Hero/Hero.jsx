@@ -1,7 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import ThemeContext from '../../context/ThemeContext';
 import styled from 'styled-components';
 import AvatarCard from '../AvatarCard/AvatarCard';
+import Bio from '../BioCard/BioCard';
+import SkillCard from "../SkillCard/SkillCard"
+import { HiGlobe, HiClipboardList } from "react-icons/hi"
+
 
 // ***FOR Course component***
 import Course from '../../components/Course/Course';
@@ -32,6 +36,11 @@ const CustomTitle = styled.h1`
     background-clip: text;
     text-fill-color: transparent;
     width: 80%;
+`;
+
+const RowWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
 `;
 
 const Hero = ({ content }) => {
@@ -67,7 +76,7 @@ const Hero = ({ content }) => {
 
   return (
     <>
-        <CustomTitle theme={theme}>{content}</CustomTitle>
+        <CustomTitle theme={theme}>{heroData.title}</CustomTitle>
         <AvatarCard />
         <Course theme={theme} {...web} />
         <Course theme={theme} {...ux}/>
