@@ -81,8 +81,8 @@ function App() {
     //   <Button onClick={fetchRepositories}>Fetch</Button>
     // </ChakraProvider>
     <>  
-      <Joke />
-      {/* <Countries /> */}
+      {/* <Joke /> */}
+      <Countries />
     </>
   );
 }

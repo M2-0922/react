@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import SearchBar from './SearchBar';
+
 import axios from "axios";
 import { 
     Container,
@@ -24,13 +26,17 @@ const Countries = () => {
   return (
     <Container>
         <h1>Countries</h1>
-        <ListGroup>
+        <SearchBar 
+            placeholder="Enter a country name..."
+            data={countries}
+        />
+        {/* <ListGroup>
             {
                 countries.map((country) => {
                     return <ListGroupItem key={country.cca3}>{country.name.common} {country.flag} - {country.capital}</ListGroupItem>
                 })
             }
-        </ListGroup>
+        </ListGroup> */}
     </Container>
   )
 }
