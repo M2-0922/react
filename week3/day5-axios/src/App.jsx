@@ -77,11 +77,11 @@ function App() {
     //     })
     //   }
     //   <Button onClick={fetchRepositories}>Fetch</Button>
-      
-      
+
     // </ChakraProvider>
-    <>  
+    <>
       <Joke />
+      <hr />
       <Countries />
     </>
   );
