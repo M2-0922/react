@@ -7,7 +7,6 @@ import Footer from "./components/Footer/Footer"
 import Home from "./pages/Home/Home";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Snippet from "./pages/Snippet/Snippet";
-import NextjsStarter from "./components/NextjsStarter/NextjsStarter";
 
 function App() {
   const [theme, setTheme] = useState("dark");
