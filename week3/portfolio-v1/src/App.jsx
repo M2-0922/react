@@ -18,7 +18,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <BrowserRouter>
-        <Nav name="joe" />
+        <Nav />
         <Routes>
           <Route path="/" element={<Home />} /> 
           <Route path="/portfolio" element={<Portfolio />} /> 

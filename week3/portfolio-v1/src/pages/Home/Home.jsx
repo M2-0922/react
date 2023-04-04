@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import ThemeContext from '../../context/ThemeContext';
 import Hero from '../../components/Hero/Hero';
@@ -13,7 +13,7 @@ const Home = () => {
     const { theme } = useContext(ThemeContext);
   return (
     <Wrapper theme={theme}>
-        <Hero content={"Hola! Im Santiago, a special human with some ability to love learning and working on teamwork. "} />
+        <Hero content={"Hola! Im Santiago, a special human with some ability to love learning and working on teamwork."} />
     </Wrapper>
   )
 }
