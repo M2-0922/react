@@ -2,14 +2,17 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import { 
     Container,
-    ListGroup,
-    ListGroupItem
-} from "reactstrap"
+    List,
+    ListItem,
+    Input
+} from "@chakra-ui/react";
+
 
 const Countries = () => {
-  const [countries, setCountries] = useState([]);
+    const [countries, setCountries] = useState([]);
+    const [countryMatch, setCountryMatch] = useState([]);
 
-  useEffect(() => {
+    useEffect(() => {
     const fetchCountries = async () => {
         try {
             const response = await axios.get("https://restcountries.com/v3.1/all");
@@ -19,20 +22,37 @@ const Countries = () => {
         }
     }
     fetchCountries();
-  }, [])
+    }, [])
 
-  return (
+    const searchCountries = (text) => {
+        let matches = countries.filter((country) => {
+            const regex = new RegExp(`${text}`, "gi");
+            return country.name.common.match(regex);
+        });
+        setCountryMatch(matches);
+    };
+
+    return (
     <Container>
-        <h1>Countries</h1>
-        <ListGroup>
-            {
-                countries.map((country) => {
-                    return <ListGroupItem key={country.cca3}>{country.name.common} {country.flag} - {country.capital}</ListGroupItem>
-                })
+        <h1 style={{fontWeight: 'bold'}}>Countries</h1>
+        <Input 
+            placeholder='Basic usage' 
+            onChange={(e) => searchCountries(e.target.value)}
+            />
+        <List>
+            {countryMatch && 
+                countryMatch.map((country) => (
+                    <ListItem key={country.cca3}>
+                        {country.name.common} {country.flag} - {country.capital}
+                    </ListItem>
+                ))
+            //     countries.map((country) => {
+            //         return <ListItem key={country.cca3}>{country.name.common} {country.flag} - {country.capital}</ListItem>
+            //     })
             }
-        </ListGroup>
+        </List>
     </Container>
-  )
+    )
 }
 
-export default Countries
+export default Countries;
