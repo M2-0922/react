@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import ThemeContext from '../../context/ThemeContext'
 import avatarImage from "../../assets/avatar.svg"
+
 const AvatarCardContainer = styled.div`
     width: 155px;
     height: 155px;
