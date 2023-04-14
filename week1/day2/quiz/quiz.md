@@ -1,8 +1,8 @@
 1. What is a React component?
-- A function that returns React elements.(UI+logic)
-- Reusable, maintainable, 
+   Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.
 
 2. What's wrong with this code?
+
 ```
 function MyComponent() {
     return (
@@ -11,7 +11,10 @@ function MyComponent() {
 }
 ```
 
+myComponent should be MyComponent
+
 3. What's wrong with this code?
+
 ```
 function Header() {
     return (
@@ -23,5 +26,15 @@ function Header() {
     )
 }
 
+ReactDOM.render(Header(), document.getElementById("root"))
+```
+
+```
+ReactDOM.render(Header(), document.getElementById("root"))
+```
+
+should be
+
+```
 ReactDOM.render(<Header />, document.getElementById("root"))
 ```
