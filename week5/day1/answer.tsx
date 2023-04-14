@@ -1,7 +1,7 @@
 // Q1
 // import React, { forwardRef, useImperativeHandle, useRef } from "react";
 
-// // Child component that receives the forwarded ref
+//
 // const ChildComponent = forwardRef((props, ref) => {
 //   const handleClick = () => {
 //     console.log("Child component props:", props);
@@ -14,7 +14,7 @@
 //   return <button onClick={handleClick}>{props.children}</button>;
 // });
 
-// // Parent component that forwards the ref to the child component
+//
 // const ParentComponent = () => {
 //   const childRef = useRef(null);
 
@@ -45,7 +45,6 @@
 //   }
 
 //   componentDidCatch(error, errorInfo) {
-//     // You can also log the error to an error reporting service here
 //     this.setState({ hasError: true, errorMessage: error.message });
 //   }
 
