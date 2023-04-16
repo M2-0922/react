@@ -40,6 +40,20 @@ function rootReducer(state = initialState, action){
         //     }
 
         // write a case for edit todo with logic
+        case "EDIT_TODO":
+            return {
+                todos: state.todos.map(todo => {
+                    if(todo.id === action.payload.id){
+                        return { 
+                            id: action.payload.id,
+                            text: action.payload.text,
+                            completed: action.payload.completed
+                        }
+                    } else {
+                        return todo
+                    }
+                })
+            }
         default:
             return state;
     }

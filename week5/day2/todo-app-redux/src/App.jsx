@@ -1,11 +1,12 @@
 import './App.css'
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { useSelector, useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from "uuid"
-import { addTodo, deleteTodo, toggleTodo, updateTodo } from "./actions/actions"
+import { addTodo, deleteTodo, editTodo, toggleTodo, updateTodo } from "./actions/actions"
 
 function App() {
   const todos = useSelector(state => state.todos);
+  const [editTodoItem, setEditTodoItem] = useState(null);
   const inputRef = useRef(null);
   const dispatch = useDispatch();
 
@@ -51,13 +52,31 @@ function App() {
   //   dispatch(updateTodo(data));
   // }
 
+  const handleEdit = (todo) => {
+    dispatch(editTodo(todo));
+  }
+
   return (
     <div className="App">
       <input type="text" ref={inputRef} />
       <button onClick={handleClick}>Add</button>
       {
         todos.map((todo) => {
-          return (
+          return editTodoItem?.id === todo.id ? (
+            <div key={todo.id}>
+              <li className='todo'>
+                <input 
+                  type="text" 
+                  value={editTodoItem.text} 
+                  onChange={(event) => setEditTodoItem({...editTodoItem, text: event.target.value})}
+                />
+                <button onClick={() => {
+                  handleEdit({...editTodoItem})
+                  setEditTodoItem(null)
+                }}>Save</button>
+              </li>
+            </div>
+          ) : (
             <div key={todo.id}>
               <li className='todo'>
                 <input 
@@ -71,6 +90,9 @@ function App() {
                   onClick={() => handleUpdate(todo.id, todo.text, todo.completed)}>
                     Update
                   </button> */}
+                  <button onClick={() => setEditTodoItem(todo)}>
+                    Edit
+                  </button>
                 <button 
                   onClick={() => handleDelete(todo.id)}>
                     Delete
