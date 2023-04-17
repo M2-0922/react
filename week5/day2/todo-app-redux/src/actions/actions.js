@@ -4,8 +4,6 @@ const DELETE_TODO = "DELETE_TODO";
 const TOGGLE_TODO = "TOGGLE_TODO";
 const UPDATE_TODO = "UPDATE_TODO";
 
-// write a action for edit todo
-
 
 // action creator
 export function addTodo(data) {
@@ -23,5 +21,3 @@ export function toggleTodo(id){
 export function updateTodo(data) {
     return { type: UPDATE_TODO, payload: data }
 }
-
-// write a action creator for edit todo
