@@ -1,87 +1,90 @@
-import './App.css'
-import { useRef } from "react"
+import './App.css';
+import { useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from "uuid"
-import { addTodo, deleteTodo, toggleTodo, updateTodo } from "./actions/actions"
+import { v4 as uuidv4 } from 'uuid';
+import { addTodo, deleteTodo, toggleTodo, updateTodo } from './actions/actions';
 
 function App() {
   const todos = useSelector(state => state.todos);
   const inputRef = useRef(null);
+  const [editingTodo, setEditingTodo] = useState(null);
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    // dispatch(
-      // { type: "ADD_TODO", 
-      //   payload: { 
-      //     id: uuidv4(), 
-      //     text: inputRef.current.value, 
-      //     completed: false 
-      //   } 
-      // }
-    // )
-
     const data = {
-      id: uuidv4(), 
-      text: inputRef.current.value, 
-      completed: false 
+      id: uuidv4(),
+      text: inputRef.current.value,
+      completed: false
     };
 
-    dispatch(addTodo(data))
-    inputRef.current.value = "";
-  }
+    dispatch(addTodo(data));
+    inputRef.current.value = '';
+  };
 
-  const handleDelete = (id) => {
-    dispatch(deleteTodo(id))
-  }
+  const handleDelete = id => {
+    dispatch(deleteTodo(id));
+  };
 
-  const handleToggle = (id) => {
+  const handleToggle = id => {
     dispatch(toggleTodo(id));
-  }
+  };
 
-  // write a function for edit todo to dispatch to reducer
+  const handleUpdate = (id, text, completed) => {
+    const data = {
+      id,
+      text,
+      completed
+    };
 
-  // const handleUpdate = (id, text, completed) => {
-  //   console.log(id, text, completed);
-  //   const data = {
-  //     id, 
-  //     text: text + " updated",
-  //     completed
-  //   }
+    dispatch(updateTodo(data));
+    setEditingTodo(null);
+  };
 
-  //   dispatch(updateTodo(data));
-  // }
+  const handleEdit = todo => {
+    setEditingTodo(todo);
+  };
+
+  const handleInputChange = event => {
+    setEditingTodo({
+      ...editingTodo,
+      text: event.target.value
+    });
+  };
+
+  const handleEditSubmit = () => {
+    handleUpdate(editingTodo.id, editingTodo.text, editingTodo.completed);
+  };
 
   return (
     <div className="App">
       <input type="text" ref={inputRef} />
       <button onClick={handleClick}>Add</button>
-      {
-        todos.map((todo) => {
+      {todos.map(todo => {
+        if (editingTodo && editingTodo.id === todo.id) {
           return (
             <div key={todo.id}>
-              <li className='todo'>
-                <input 
-                  type="checkbox" 
-                  checked={todo.completed}
-                  onChange={() => handleToggle(todo.id)}
-                />
-                <b className={todo.completed ? 'completed-todo': ""}>{todo.text}</b>
-                {/* once you click to edit button, its going to have an input instead of text and once you type and submit, you need to dispatch to reducer. */}
-                {/* <button 
-                  onClick={() => handleUpdate(todo.id, todo.text, todo.completed)}>
-                    Update
-                  </button> */}
-                <button 
-                  onClick={() => handleDelete(todo.id)}>
-                    Delete
-                  </button>
+              <li className="todo">
+                <input type="checkbox" checked={todo.completed} onChange={() => handleToggle(todo.id)} />
+                <input type="text" value={editingTodo.text} onChange={handleInputChange} />
+                <button onClick={handleEditSubmit}>Update</button>
               </li>
             </div>
-          )
-        }) 
-      }
+          );
+        } else {
+          return (
+            <div key={todo.id}>
+              <li className="todo">
+                <input type="checkbox" checked={todo.completed} onChange={() => handleToggle(todo.id)} />
+                <b className={todo.completed ? 'completed-todo' : ''}>{todo.text}</b>
+                <button onClick={() => handleEdit(todo)}>Edit</button>
+                <button onClick={() => handleDelete(todo.id)}>Delete</button>
+              </li>
+            </div>
+          );
+        }
+      })}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

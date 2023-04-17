@@ -24,22 +24,38 @@ function rootReducer(state = initialState, action){
                     }
                 })
             }
-        // case "UPDATE_TODO":
-        //     return {
-        //         todos: state.todos.map(todo => {
-        //             if(todo.id === action.payload.id){
-        //                 return { 
-        //                     id: action.payload.id,
-        //                     text: action.payload.text,
-        //                     completed: action.payload.completed
-        //                 }
-        //             }else {
-        //                 return todo
-        //             }
-        //         })
-        //     }
+        case "UPDATE_TODO":
+            return {
+                todos: state.todos.map(todo => {
+                    if(todo.id === action.payload.id){
+                        return { 
+                            id: action.payload.id,
+                            text: action.payload.text,
+                            completed: action.payload.completed
+                        }
+                    }else {
+                        return todo
+                    }
+                })
+            }
 
         // write a case for edit todo with logic
+
+        case "EDIT_TODO":
+            return {
+              todos: state.todos.map(todo => {
+                if (todo.id === action.payload.id) {
+                  return {
+                    ...todo,
+                    text: action.payload.text // 更新されたテキストをセットする
+                  };
+                } else {
+                  return todo;
+                }
+              })
+            };
+          
+        
         default:
             return state;
     }
