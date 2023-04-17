@@ -39,8 +39,8 @@ function App() {
     dispatch(updateTodo(data));
     setEditingTodo(null);
   };
-
-  const handleEdit = todo => {
+``
+  const handleEdit = todo => {``
     setEditingTodo(todo);
   };
 
