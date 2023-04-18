@@ -1,6 +1,6 @@
 import React from 'react'
-import Count from "../../components/Count/Count"
-import CountAction from "../../components/CountAction/CountAction"
+import Count from '../../components/Count/Count'
+import CountAction from '../../components/CountAction/CountAction'
 
 const Counter = () => {
   return (

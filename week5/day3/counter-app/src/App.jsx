@@ -1,9 +1,9 @@
-import './App.css'
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from './pages/Home/Home';
+import './App.css';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import Home from './pages/Home/Home'
 import Counter from "./pages/Counter/Counter"
-import Favorite from './pages/Favorite/Favorite';
-import styled from "styled-components"
+import Favorite from "./pages/Favorite/Favorite"
+import styled from 'styled-components'
 
 const NavContainer = styled.nav`
   ul{
@@ -26,7 +26,8 @@ const NavContainer = styled.nav`
 function App() {
 
   return (
-      <BrowserRouter >
+    <div className="App">
+      <BrowserRouter>
         <NavContainer>
           <ul>
             <h1>Logo</h1>
@@ -42,11 +43,12 @@ function App() {
           </ul>
         </NavContainer>
         <Routes>
-          <Route path='/count' element={<Counter />} />
-          <Route path='/' element={<Home />}/>
-          <Route path='/favorite' element={<Favorite />}/>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/count" element={<Counter />}></Route>
+          <Route path="/favorite" element={<Favorite />}></Route>
         </Routes>
       </BrowserRouter>
+    </div>
   )
 }
 

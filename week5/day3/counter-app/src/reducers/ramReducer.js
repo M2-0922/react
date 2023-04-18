@@ -8,16 +8,13 @@ const initialState = {
 function ramReducer(state = initialState, action) {
     console.log(action.type);
     switch (action.type) {
-        
         case "FETCH_DATA":
             return {
                 ...state,
                 isLoading: true,
             }
-        case "FETCH_CHARACTER_DATA_SUCCESSFULL": //all data's isFavotire become true...?
+        case "FETCH_CHARACTER_DATA_SUCCESSFULL":
             const favoriteCharacters = JSON.parse(localStorage.getItem("favoriteCharacters")) || [];
-            console.log("aaa");
-            console.log(favoriteCharacters);
             const updatedCharacters = action.payload.data.map(character => {
                 const favoriteCharacter = favoriteCharacters.find((favorite) => 
                     favorite.id === character.id
@@ -30,7 +27,7 @@ function ramReducer(state = initialState, action) {
                 isLoading: false,
                 characters: updatedCharacters
             }
-        case "FETCH_LOCATION_DATA_SUCCESSFULL": //all data's isFavotire become true...?
+        case "FETCH_LOCATION_DATA_SUCCESSFULL":
             const favoriteLocations = JSON.parse(localStorage.getItem("favoriteLocations")) || [];
             const updatedLocations = action.payload.data.map(location => {
                 const favoriteLocation = favoriteLocations.find((favorite) =>
