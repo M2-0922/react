@@ -1,4 +1,6 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { toggleFavoriteLocation } from '../../actions/ramActions'
 import styled from 'styled-components'
 
 const CustomCardContainer = styled.div`
@@ -10,13 +12,19 @@ const CustomCardContainer = styled.div`
     text-align: start;
 `;
 
-const LocationCard = ({id, name, type, dimention, residents}) => {
+const LocationCard = ({id, name, type, dimention, residents, isFavorite}) => {
+  const dispatch = useDispatch();
+
+  const handleFavs = (id) => {
+    dispatch(toggleFavoriteLocation(id));
+  }
+
   return (
-    <CustomCardContainer>
-        <h3>{name}</h3>
-        <p>Type: {type}</p>
-        <p>Dimension: {dimention}</p>
-        <p>{residents.length} people lives here</p>
+    <CustomCardContainer onClick={() => handleFavs(id)}>
+      <h4>{name} - {isFavorite ? "  👍🏼" : " 🤍"}</h4>
+      <p>Type: {type}</p>
+      <p>Dimention: {dimention}</p>
+      <p>{residents.length} people lives here</p>
     </CustomCardContainer>
   )
 }

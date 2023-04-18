@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from "styled-components";
-import { useDispatch } from "react-redux";
-import { toggleFavorite } from '../../actions/ramActions';
+import { useDispatch } from 'react-redux'
+import { toggleFavoriteCharacter } from '../../actions/ramActions'
+import styled from 'styled-components'
 
 const CustomCardContainer = styled.div`
     display: flex;
@@ -14,22 +14,20 @@ const CustomCardContainer = styled.div`
         margin-bottom: 12px;
         border-radius: 6px;
     }
-
 `;
 
 const CharacterCard = ({ id, name, status, image, isFavorite }) => {
   const dispatch = useDispatch();
 
   const handleFavs = (id) => {
-    dispatch(toggleFavorite(id))
+    dispatch(toggleFavoriteCharacter(id));
   }
-
 
   return (
     <CustomCardContainer onClick={() => handleFavs(id)}>
-        <img src={image} alt={id + "-" + name} />
-        <h4>{name} - {isFavorite ? " 👍🏼" : " 🤍"}</h4>
-        <p>{status}</p>
+      <img src={image} alt={id + "-" + name} />
+      <h4>{name} - {isFavorite ? "  👍🏼" : " 🤍"}</h4>
+      <p>{status}</p>
     </CustomCardContainer>
   )
 }
