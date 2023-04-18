@@ -11,6 +11,7 @@ const rootReducer = combineReducers({
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
 store.subscribe(() => {
+    // subscribe func is triggers when you have some changes on store
     localStorage.setItem("count", store.getState().count.count);
 })
 

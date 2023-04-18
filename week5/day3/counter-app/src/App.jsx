@@ -2,6 +2,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from './pages/Home/Home';
 import Counter from "./pages/Counter/Counter"
+import Favorite from './pages/Favorite/Favorite';
 import styled from "styled-components"
 
 const NavContainer = styled.nav`
@@ -25,7 +26,6 @@ const NavContainer = styled.nav`
 function App() {
 
   return (
-    <div className="App">
       <BrowserRouter >
         <NavContainer>
           <ul>
@@ -36,14 +36,17 @@ function App() {
             <li>
               <Link to={"/count"}>Count</Link>
             </li>
+            <li>
+              <Link to={"/favorite"}>Favorite</Link>
+            </li>
           </ul>
         </NavContainer>
         <Routes>
           <Route path='/count' element={<Counter />} />
           <Route path='/' element={<Home />}/>
+          <Route path='/favorite' element={<Favorite />}/>
         </Routes>
       </BrowserRouter>
-    </div>
   )
 }
 
