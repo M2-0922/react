@@ -5,8 +5,6 @@ const TOGGLE_TODO = "TOGGLE_TODO";
 const UPDATE_TODO = "UPDATE_TODO";
 const EDIT_TODO = "EDIT_TODO";
 
-// write a action for edit todo
-
 
 // action creator
 export function addTodo(data) {
@@ -23,6 +21,7 @@ export function toggleTodo(id){
 
 export function updateTodo(data) {
     return { type: UPDATE_TODO, payload: data }
+<<<<<<< HEAD
 }
 
 // write a action creator for edit todo
@@ -30,3 +29,6 @@ export function updateTodo(data) {
 export function editTodo(id, text, completed) {
     return { type: EDIT_TODO, payload: { id, text, completed } }
 }
+=======
+}
+>>>>>>> origin/master

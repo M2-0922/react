@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './App.css';
 import { useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -83,6 +84,17 @@ function App() {
           );
         }
       })}
+=======
+import './App.css'
+import AddTodo from './components/AddTodo/AddTodo';
+import TodoList from "./components/TodoList/TodoList"
+function App() {
+
+  return (
+    <div className="App">
+      <AddTodo />
+      <TodoList />
+>>>>>>> origin/master
     </div>
   );
 }

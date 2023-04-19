@@ -1,5 +1,5 @@
 {
-  "name": "todo-app-redux",
+  "name": "counter-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,9 +12,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
-    "redux": "^4.2.1",
-    "styled-components": "^5.3.9",
-    "uuid": "^9.0.0"
+    "redux": "^4.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

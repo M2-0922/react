@@ -24,20 +24,30 @@ function rootReducer(state = initialState, action){
                     }
                 })
             }
+<<<<<<< HEAD
         case "UPDATE_TODO":
+=======
+        case 'UPDATE_TODO':
+>>>>>>> origin/master
             return {
                 todos: state.todos.map(todo => {
                     if(todo.id === action.payload.id){
                         return { 
+<<<<<<< HEAD
                             id: action.payload.id,
                             text: action.payload.text,
                             completed: action.payload.completed
+=======
+                            ...todo,
+                            text: action.payload.text,
+>>>>>>> origin/master
                         }
                     }else {
                         return todo
                     }
                 })
             }
+<<<<<<< HEAD
 
         // write a case for edit todo with logic
 
@@ -56,6 +66,8 @@ function rootReducer(state = initialState, action){
             };
           
         
+=======
+>>>>>>> origin/master
         default:
             return state;
     }
