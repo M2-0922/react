@@ -2,7 +2,12 @@ import './App.css'
 import React, { useState, useEffect, useRef } from "react";
 import Lab1 from './components/Lab1/Lab1';
 import Lab2 from './components/Lab2/Lab2';
+import TodoList from './components/TodoList/TodoList';
 // import Counter from './components/Counter/Counter';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { addTodo, setVisibilityFilter } from './store/actions';
+import { v4 as uuidv4 } from 'uuid';
 
 // HOCs #1
 
@@ -56,15 +61,29 @@ function App() {
   //     setLoading(false);
   //   }, 3000)
   // }, [])
+  const [todo, setTodo] = useState([]);
+  const [visibilityFilter, setVisibilityFilter] = useState("SHOW_ALL");
+
+  const dispatch = useDispatch();
 
   const inputRef = useRef(null);
-  const inputRef2 = useRef(null);
+  // const inputRef2 = useRef(null);
+
+  // const handleClick = () => {
+  //   // console.log(inputRef.current);
+  //   inputRef.current.focus();
+  //   console.log("input1", inputRef.current.value);
+  //   console.log("input2", inputRef2.current.value);
+  // }
 
   const handleClick = () => {
-    // console.log(inputRef.current);
-    inputRef.current.focus();
-    console.log("input1", inputRef.current.value);
-    console.log("input2", inputRef2.current.value);
+    dispatch(addTodo({
+      id: uuidv4(),
+      text: inputRef.current.value,
+      completed: false
+    }))
+    inputRef.current.value = "";
+    dispatch(setVisibilityFilter("SHOW_ALL"))
   }
 
   return (
@@ -99,9 +118,13 @@ function App() {
       )} /> */}
 
 
-      <input type="text" ref={inputRef2} />
+      {/* <input type="text" ref={inputRef2} />
       <input type="text" ref={inputRef} />
-      <button onClick={handleClick}>Click</button>
+      <button onClick={handleClick}>Click</button> */}
+
+      <input ref={inputRef} placeholder='Please enter todo'/>
+      <button onClick={handleClick}>Add Todo</button>
+      <TodoList />
     </div>
   )
 }

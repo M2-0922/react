@@ -1,5 +1,5 @@
 {
-  "name": "reactconcepts",
+  "name": "todo-app-redux",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,7 +13,8 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "redux": "^4.2.1",
-    "redux-logger": "^3.0.6"
+    "styled-components": "^5.3.9",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
