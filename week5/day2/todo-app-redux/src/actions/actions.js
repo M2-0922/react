@@ -4,9 +4,12 @@ const DELETE_TODO = "DELETE_TODO";
 const TOGGLE_TODO = "TOGGLE_TODO";
 const UPDATE_TODO = "UPDATE_TODO";
 
+<<<<<<< HEAD
 // write a action for edit todo
 const EDIT_TODO = "EDIT_TODO";
 const SUBMIT_TODO = "SUBMIT_TODO";
+=======
+>>>>>>> refs/heads/master
 
 // action creator
 export function addTodo(data) {
@@ -22,6 +25,7 @@ export function toggleTodo(id) {
 }
 
 export function updateTodo(data) {
+<<<<<<< HEAD
     return { type: UPDATE_TODO, payload: data };
 }
 
@@ -39,3 +43,7 @@ export function submitTodo(id, text) {
     payload: { id, text },
     };
 }
+=======
+    return { type: UPDATE_TODO, payload: data }
+}
+>>>>>>> refs/heads/master

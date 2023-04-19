@@ -23,6 +23,7 @@ switch (action.type) {
             } else {
                 return todo;
             }
+<<<<<<< HEAD
             }),
         };
     // write a case for edit todo with logic
@@ -44,6 +45,40 @@ switch (action.type) {
     default:
         return state;
 }
+=======
+        case 'DELETE_TODO':
+            return {
+                todos: state.todos.filter(todo => todo.id != action.payload.id)
+            }
+        case 'TOGGLE_TODO':
+            return {
+                todos: state.todos.map(todo => {
+                    if(todo.id === action.payload.id){
+                        return {
+                            ...todo, completed: !todo.completed
+                        }
+                    }else{
+                        return todo
+                    }
+                })
+            }
+        case 'UPDATE_TODO':
+            return {
+                todos: state.todos.map(todo => {
+                    if(todo.id === action.payload.id){
+                        return { 
+                            ...todo,
+                            text: action.payload.text,
+                        }
+                    }else {
+                        return todo
+                    }
+                })
+            }
+        default:
+            return state;
+    }
+>>>>>>> refs/heads/master
 }
 
 export default rootReducer;
