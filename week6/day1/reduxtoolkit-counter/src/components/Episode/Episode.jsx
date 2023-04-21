@@ -13,7 +13,9 @@ const Episode = () => {
     if(status === "idle"){
         dispatch(fetchEpisode())
     }
-  }, [dispatch, status])
+    console.log(dispatch);
+    console.log(status);
+  }, [status])
 
   if(status === "loading"){
     return <h2>Loading...</h2>
@@ -27,7 +29,7 @@ const Episode = () => {
     <div>
         {
             episodes.map(episode => {
-                return <div>{episode.name}</div>
+                return <div key={episode.id}>{episode.name}</div>
             })
         }
     </div>

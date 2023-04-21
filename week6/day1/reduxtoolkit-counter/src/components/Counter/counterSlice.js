@@ -13,6 +13,7 @@ const counterSlice = createSlice({
             state.count -= 1;
         },
         incrementByAmount: (state, action) => {
+            console.log(action);
             state.count += action.payload;
         },
         decrementByAmount: (state, action) => {

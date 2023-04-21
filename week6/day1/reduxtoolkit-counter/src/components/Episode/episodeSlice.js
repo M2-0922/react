@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchEpisode = createAsyncThunk("episode/fetchEpisode", async () => {
-    const response = await axios.get("https://rickandmortyapi.com/api/episod");
+    const response = await axios.get("https://rickandmortyapi.com/api/episode");
     return response.data.results;
 })
 
@@ -14,7 +14,11 @@ const episodeSlice = createSlice({
         status: "idle",
         error: null
     },
-    reducers:{},
+    reducers:{
+        addToList: (state, action) => {
+            state.list.push(action.payload)
+        }
+    },
     extraReducers: (builder) => {
         builder
         .addCase(fetchEpisode.pending, (state) => {
@@ -31,4 +35,5 @@ const episodeSlice = createSlice({
     }
 })
 
+export const { addToList } = episodeSlice.actions;
 export default episodeSlice.reducer;
