@@ -16,6 +16,8 @@ The Virtual DOM is a technique used by React to make updating the user interface
 - What is the difference between state and props in React?
 ```js
 // explain here
+State represents the internal state of a component, and it can only be changed by the component itself.
+Props, on the other hand, are properties passed to a component from its parent component. They are read-only and cannot be changed by the component itself.
 
 ```
 - What are React Hooks? How do they simplify the process of writing functional components?
