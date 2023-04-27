@@ -43,12 +43,11 @@ describe("Counter", () => {
     // -- 2 time fire the increment 
     // -- fire the switch sign button
     // expect what you have -2
-
-})
-it("should switch the sign of count when the switch sign button is clicked", () => {
-    const { getByTestId, getByRole } = render(<Counter initialCount={0} />);
-    fireEvent.click(getByRole("button", { name: "Increment" }));
-    fireEvent.click(getByRole("button", { name: "Increment"}));
-    fireEvent.click(getByRole("button", { name: "Switch Sign"}));
-    expect(getByTestId("count")).toHaveTextContent(-2);
+    it("should switch the sign of count when the switch sign button is clicked", () => {
+        const { getByTestId, getByRole } = render(<Counter initialCount={0} />);
+        fireEvent.click(getByRole("button", { name: "Increment" }));
+        fireEvent.click(getByRole("button", { name: "Increment"}));
+        fireEvent.click(getByRole("button", { name: "Switch Sign"}));
+        expect(getByTestId("count")).toHaveTextContent(-2);
+    })
 })
