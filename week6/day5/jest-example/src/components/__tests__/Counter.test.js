@@ -31,11 +31,24 @@ describe("Counter", () => {
     // -- 2 time fire the increment 
     // -- fire the reset button
     // expect to see the initial text content
-
+    it("should reset the count when the reset button is clicked", () => {
+        const { getByTestId, getByRole } = render(<Counter initialCount={0} />);
+        fireEvent.click(getByRole("button", { name: "Increment" }));
+        fireEvent.click(getByRole("button", { name: "Increment"}));
+        fireEvent.click(getByRole("button", { name: "Reset"}));
+        expect(getByTestId("count")).toHaveTextContent(0);
+    })
     // should switch the sign of count when the switch sign button is clicked;
     // -- give initial count
     // -- 2 time fire the increment 
     // -- fire the switch sign button
     // expect what you have -2
 
+})
+it("should switch the sign of count when the switch sign button is clicked", () => {
+    const { getByTestId, getByRole } = render(<Counter initialCount={0} />);
+    fireEvent.click(getByRole("button", { name: "Increment" }));
+    fireEvent.click(getByRole("button", { name: "Increment"}));
+    fireEvent.click(getByRole("button", { name: "Switch Sign"}));
+    expect(getByTestId("count")).toHaveTextContent(-2);
 })
